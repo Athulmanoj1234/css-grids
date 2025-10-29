@@ -1,0 +1,131 @@
+<head>
+  <style>
+    .newspaper {
+      border: solid black 1px;
+      background-color: lightgoldenrodyellow;
+      /* column-count: 3;
+  column-gap: 40px; */
+      /* it is used to put divide the container into 3 equal parts of the column */
+      column-count: 3;
+      /* the divided columns is 122px gap ie gap between the columns */
+      column-gap: 122px;
+      padding: 50px 40px;
+    }
+
+    .grid-container {
+      display: grid;
+      /* for alogning 8 items in gird if give 4 columns if will be automatically alligned to 4 columns and 2 rows so we no need to give grid-template-rows */
+      grid-template-columns: auto auto 100px auto;
+      /* gap is used to assign gap to columns and rows */
+      /* gap if we want to assign gap to both rows and columns */
+      gap: 10px;
+      /* row gap for rows only: gap applied to only rows */
+      row-gap: 15px;
+      /* column gap for columns only */
+      column-gap: 15px;
+      /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+    }
+
+    .grid-container2 {
+      /* to align items in an grid container to grid layout */
+      display: grid;
+      /* shorthand propeties instead of grid-template-rows and grid-template-columns property here first row will be of size 150px, second row will be 200px, and third row 700px */
+      grid: 150px 200px 700px / auto 100px 200px;
+    }
+
+    .grid-container3 {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      /* will be aligned grid items to the center */
+      /* place-content: center;  */
+      /* grif items will be aligned horizontally at the start */
+    }
+
+    .grid-container>div,
+    .grid-container2>div,
+    .grid-container3>div {
+      border: 1px solid black;
+      background-color: yellow;
+    }
+
+    .grid-container3>.item1 {
+      /* do the item 1 is presented in 2nd row at begin It means “start at a specific grid line number. here line1 -> row1, line2 -> row2” */
+      /* grid-row-start: 2;  */
+      /* uncommet when grid-row-end is commented */
+    }
+
+    .grid-container3>.item1 {
+      /* grid-row-end: span 2; */
+      /* the grid-row end the if we give a numeric value to to end to a row line it will be ended at rowline - 1 line of the row */
+      /* grid-row-end: 4;  */
+      /* shorthand property that is item 1 should be in the 1 line start ie start of the row line and should be spanned over 2 rows ie 3 - 1 */
+      /* grid-row: 1 / 3; */
+    }
+
+    .grid-container3>.item1 {
+      /* here 1st item is started in second column */
+      /* grid-column-start: 2; */
+      /* here the item1 is spanned over 3 columns */
+      /* grid-column-end: span 3;   */
+      /* shorthand property ie item will be 2 nd column and it will be spanned over 2 columns */
+      /* grid-column: 2 / span 2;  */
+      /* start - Aligns to left edge of the cell, end/right-Aligns to right edge of the cell, center - Centers horizontally, stretch(default) - Fills the entire cell width of a single item */
+      /* justify-self: start | end | center | stretch;} */
+      /* same as justify-self but align-self aligns horizontally */
+      /* align-self: start; */
+
+      /* place-content: center; */
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- column gap -->
+  <!-- <h1>The column-gap Property</h1>
+<p>The column-gap property defines the gap between the columns of the element:</p>
+
+<div class="newspaper">
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+</div> -->
+
+  <!-- grid gap example  -->
+  <!-- <div class="grid-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>  
+  <div>8</div>  
+</div> -->
+
+  <!-- grid-template-columns/rows shorthand properties -->
+  <!-- <div class="grid-container2">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>  
+  <div>8</div>  
+</div> -->
+
+  <div style="height: screen; width: 100%;">
+    <div class="grid-container3">
+      <div class="item1">1</div>
+      <div class="item2">2</div>
+      <div class="item3">3</div>
+      <div class="item4">4</div>
+      <div class="item5">5</div>
+      <div class="item6">6</div>
+      <div class="item7">7</div>
+      <div class="item8">8</div>
+    </div>
+  </div>
+
+</body>
+
+</html>
